@@ -6,7 +6,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "pnpm lint && pnpm build && pnpm format"
   },
   "devDependencies": {
     "@unllamas/eslint-config": "workspace:*",
