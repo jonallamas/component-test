@@ -3,6 +3,6 @@ export * from "./style";
 export * from "./theme";
 
 // Components
-export * from "./Button";
+export { Button, type ButtonProps } from "./Button";
 export * from "./Flex";
 export * from "./Divider";

@@ -1,11 +1,29 @@
 "use client";
 
-import { ButtonProps } from "./types";
+import { ReactNode } from "react";
+
+import { Color, Variant, Size } from "./types";
 
 import { theme } from "../theme";
 import { BaseButton } from "./style";
 
-export function Button(props: ButtonProps) {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  color?: Color;
+  variant?: Variant;
+  size?: Size;
+  loading?: boolean;
+  disabled?: boolean;
+  componentName?: string;
+  tabIndex?: number;
+  onClick: () => any;
+  onTouchStart?: () => void;
+  onTouchEnd?: () => void;
+  onMouseDown?: () => void;
+  onMouseUp?: () => void;
+}
+
+export function Button(props: ButtonProps): JSX.Element {
   const {
     children,
     color = "primary",
@@ -60,3 +78,5 @@ export function Button(props: ButtonProps) {
     </BaseButton>
   );
 }
+
+Button.displayName = "Button";
