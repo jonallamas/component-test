@@ -1,32 +1,9 @@
 "use client";
 
-import { Variant, Color, ButtonProps } from "./types";
+import { ButtonProps } from "./types";
 
 import { theme } from "../theme";
 import { BaseButton } from "./style";
-
-function variantsList(variant: Variant, color: Color) {
-  const list = {
-    filled: {
-      background: theme.colors[color],
-      color: theme.colors.black,
-    },
-    bezeled: {
-      background: theme.colors[`${color}15`],
-      color: theme.colors[color],
-    },
-    bezeledGray: {
-      background: theme.colors.gray15,
-      color: theme.colors[color],
-    },
-    borderless: {
-      background: theme.colors.transparent,
-      color: theme.colors[color],
-    },
-  };
-
-  return list[variant];
-}
 
 export function Button(props: ButtonProps) {
   const {
@@ -44,6 +21,28 @@ export function Button(props: ButtonProps) {
     onMouseUp,
   } = props;
 
+  let backgroundColor: string = "transparent";
+  let textColor: string = theme.colors.text;
+
+  switch (variant) {
+    case "filled":
+      backgroundColor = theme.colors[color];
+      textColor = theme.colors.black;
+      break;
+    case "bezeled":
+      backgroundColor = theme.colors[`${color}15`];
+      textColor = theme.colors[color];
+      break;
+    case "bezeledGray":
+      backgroundColor = theme.colors.gray15;
+      textColor = theme.colors[color];
+      break;
+    case "borderless":
+      backgroundColor = "transparent";
+      textColor = theme.colors[color];
+      break;
+  }
+
   return (
     <BaseButton
       onClick={onClick}
@@ -54,10 +53,9 @@ export function Button(props: ButtonProps) {
       tabIndex={tabIndex}
       disabled={disabled || loading}
       $isSmall={size === "small"}
-      $background={variantsList(variant, color)?.background}
-      $color={variantsList(variant, color)?.color}
+      $background={backgroundColor}
+      $color={textColor}
     >
-      {/* {loading ? <BtnLoader /> : children} */}
       {children}
     </BaseButton>
   );
