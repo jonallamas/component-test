@@ -1,6 +1,6 @@
 {
-  "name": "component-test",
-  "private": true,
+  "name": "@unllamas/component-test",
+  "private": false,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",

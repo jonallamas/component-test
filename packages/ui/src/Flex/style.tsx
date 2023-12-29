@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
-import { BaseFlexProps } from './types';
+import { BaseFlexProps } from "./types";
 
 export const BaseFlex = styled.div<BaseFlexProps>`
   position: relative;

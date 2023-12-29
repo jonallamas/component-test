@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Variant, Color, ButtonProps } from './types';
+import { Variant, Color, ButtonProps } from "./types";
 
-import { theme } from '../theme';
-import { BaseButton } from './style';
+import { theme } from "../theme";
+import { BaseButton } from "./style";
 
 function variantsList(variant: Variant, color: Color) {
   const list = {
@@ -31,9 +31,9 @@ function variantsList(variant: Variant, color: Color) {
 export function Button(props: ButtonProps) {
   const {
     children,
-    color = 'primary',
-    variant = 'filled',
-    size = 'normal',
+    color = "primary",
+    variant = "filled",
+    size = "normal",
     loading = false,
     disabled = false,
     tabIndex = 0,
@@ -53,7 +53,7 @@ export function Button(props: ButtonProps) {
       onMouseUp={onMouseUp}
       tabIndex={tabIndex}
       disabled={disabled || loading}
-      $isSmall={size === 'small'}
+      $isSmall={size === "small"}
       $background={variantsList(variant, color)?.background}
       $color={variantsList(variant, color)?.color}
     >

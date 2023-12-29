@@ -1,12 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Testeo de componentes',
+  title: "Testeo de componentes",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   return (
-    <html lang='es'>
+    <html lang="es">
       <body>{children}</body>
     </html>
   );

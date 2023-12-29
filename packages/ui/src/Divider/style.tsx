@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
-import { BaseDividerProps } from './types';
+import { BaseDividerProps } from "./types";
 
 export const BaseDivider = styled.div<BaseDividerProps>`
   width: 100%;

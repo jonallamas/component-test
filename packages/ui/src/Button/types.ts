@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-export type Color = 'primary' | 'secondary' | 'error';
-export type Variant = 'filled' | 'bezeled' | 'bezeledGray' | 'borderless';
-export type Size = 'small' | 'normal';
+export type Color = "primary" | "secondary" | "error";
+export type Variant = "filled" | "bezeled" | "bezeledGray" | "borderless";
+export type Size = "small" | "normal";
 
 export interface ButtonProps {
   children: ReactNode;
@@ -13,7 +13,7 @@ export interface ButtonProps {
   disabled?: boolean;
   componentName?: string;
   tabIndex?: number;
-  onClick: (e: any) => any;
+  onClick: () => any;
   onTouchStart?: () => void;
   onTouchEnd?: () => void;
   onMouseDown?: () => void;
