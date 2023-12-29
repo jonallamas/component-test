@@ -1,5 +1,6 @@
 {
   "name": "@unllamas/component-test",
+  "version": "0.0.1",
   "private": false,
   "scripts": {
     "build": "turbo build",
