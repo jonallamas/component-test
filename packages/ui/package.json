@@ -1,7 +1,7 @@
 {
-  "name": "@repo/ui",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@unllamas/ui",
+  "version": "0.0.1",
+  "private": false,
   "exports": {
     ".": "./src/index.tsx"
   },
@@ -10,8 +10,8 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@unllamas/eslint-config": "workspace:*",
+    "@unllamas/typescript-config": "workspace:*",
     "@turbo/gen": "^1.10.12",
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.5.2",

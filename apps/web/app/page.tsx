@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Flex, Divider } from "@repo/ui";
+import { Button, Flex, Divider } from "@unllamas/ui";
 
 export default function Page(): JSX.Element {
   return (
